@@ -70,7 +70,7 @@ export default function Projects() {
             >
               <img
                 src={project.img}
-                alt={project.alt}
+                alt={project.title}
                 style={{ width: '100%', height: '360px', background: '#1a1a2e', borderRadius: '15px', objectFit: 'cover', display: 'block' }}
                 onError={e => { (e.target as HTMLImageElement).style.background = '#1a1a2e' }}
               />
