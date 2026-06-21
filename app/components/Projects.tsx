@@ -76,8 +76,8 @@ export default function Projects() {
               />
               {/* Mobile content */}
               <div className="mobile-project-content" style={{ display: 'none', marginTop: '20px', background: 'rgba(0,229,255,0.05)', border: '1px solid rgba(0,229,255,0.2)', padding: '20px', borderRadius: '15px' }}>
-                <h3 style={{ color: '#00e5ff', marginTop: 0, marginBottom: '15px' }}>{project.mobileName}</h3>
-                <p style={{ color: '#fff', lineHeight: 1.5, marginBottom: '15px' }}>{project.mobileDesc}</p>
+                <h3 style={{ color: '#00e5ff', marginTop: 0, marginBottom: '15px' }}>{project.title}</h3>
+<p style={{ color: '#fff', lineHeight: 1.5, marginBottom: '15px' }}>{project.desc}</p>
                 <div style={{ display: 'flex', gap: '8px', flexWrap: 'wrap', marginBottom: '15px' }}>
                   {project.tags.map(tag => (
                     <span key={tag} style={{ padding: '6px 12px', background: 'rgba(255,255,255,0.08)', borderRadius: '20px', fontSize: '13px', color: 'white' }}>{tag}</span>
