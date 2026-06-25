@@ -90,7 +90,7 @@ liveUrl: 'https://azdoud.vercel.app',
     tags: ['Next.js', 'Django', 'REST API', 'TypeScript'], 
     img: '/screen7.png',
      video: '/videos/tetouan-doctor.mp4',
-      liveUrl: 'https://tetouan-doctor-vxnd.vercel.app/'
+      liveUrl: 'https://tetouan-doctor.vercel.app/'
   
   },
   {
