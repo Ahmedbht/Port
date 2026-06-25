@@ -88,7 +88,7 @@ liveUrl: 'https://azdoud.vercel.app',
     title: 'Tetouan Doctors : Medical Booking Platform',
      desc: 'Full-stack appointment booking app for doctors in Tétouan. Patients browse specialists, book available slots, and doctors manage their schedule via a personal dashboard.',
     tags: ['Next.js', 'Django', 'REST API', 'TypeScript'], 
-    img: '/screen7.png',
+    img: '/doctor.png',
      video: '/videos/tetouan-doctor.mp4',
       liveUrl: 'https://tetouan-doctor.vercel.app/'
   
