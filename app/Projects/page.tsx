@@ -108,7 +108,23 @@ liveUrl: 'https://azdoud.vercel.app',
     tags: ['Python', 'JSON', 'CLI'],
     img: '/quizz pic.png',
     liveUrl: 'https://github.com/Ahmedbht/history-quiz',
-}
+},
+  {
+    id: 14,
+    title: 'EV Charging Station Finder',
+    desc: 'Full stack app showing real EV charging stations in Morocco. Features city search, filtering, analytics dashboard with charts and top 10 ranking.',
+    tags: ['React', 'FastAPI', 'Python', 'Pydantic'],
+    img: '/screen9.png',
+    liveUrl: 'https://ev-charging-frontend-ebon.vercel.app/',
+},
+  {
+    id: 15,
+    title: 'Physio Nord',
+    desc: 'Professional landing page for a real physiotherapy and rehabilitation center in Tétouan. Features a video hero section, services with photos, about section with stats, contact form and smooth scroll animations.',
+    tags: ['React', 'CSS', 'AOS'],
+    img: '/physionord.png',
+    liveUrl: 'https://physio-nord-8jpw.vercel.app/',
+},
 ]
 
 export default function ProjectPage() {

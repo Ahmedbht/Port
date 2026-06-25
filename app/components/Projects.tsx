@@ -13,14 +13,15 @@ const projects = [
     video: '/videos/tetouan.mp4',
     liveUrl: 'https://www.discovertetouan.com/',
   },
-  {
-    id: 5,
-    title: 'Azdoud : Premium Car Rental',
-desc: 'Full frontend car rental website for a Moroccan business featuring a luxury dark design, featured fleet section, WhatsApp booking integration, and fully responsive layout.',
-tags: ['Next.js', 'TypeScript', 'Tailwind CSS'],
-img: '/screen5.png',
-liveUrl: 'https://azdoud.vercel.app',
-  },
+  
+      {
+    id: 15,
+    title: 'Physio Nord',
+    desc: 'Professional landing page for a real physiotherapy and rehabilitation center in Tétouan. Features a video hero section, services with photos, about section with stats, contact form and smooth scroll animations.',
+    tags: ['React', 'CSS', 'AOS'],
+    img: '/physionord.png',
+    liveUrl: 'https://physio-nord-8jpw.vercel.app/',
+},
   {
     id: 3,
     title: 'Weather App',
