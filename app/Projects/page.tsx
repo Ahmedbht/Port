@@ -9,7 +9,7 @@ const allProjects = [
   desc: 'Desktop application for managing passwords securely. Features include adding, editing, deleting and searching passwords, random password generation, and AES-encrypted local storage using JSON.',
   tags: ['Java', 'JavaFX', 'AES Encryption', 'Gson', 'Maven'],
   img: '/JAVAAAPHOTO.png',
-  video: '/videos/Javavideo.mp4',
+  video: 'https://www.youtube.com/embed/tJizP0AY2ug?si=K5AdJ9nI_NIO_Xjs',
   liveUrl: '#',
 },
   {
@@ -72,7 +72,7 @@ liveUrl: 'https://azdoud.vercel.app',
      desc: 'Full-stack appointment booking app for doctors in Tétouan. Patients browse specialists, book available slots, and doctors manage their schedule via a personal dashboard.',
     tags: ['Next.js', 'Django', 'REST API', 'TypeScript'], 
     img: '/doctor.png',
-     video: '/videos/tetouan-doctor.mp4',
+     video: 'https://www.youtube.com/embed/V-fs8Iy6XmA?si=j4lLHVPjCWjZ9XVi',
       liveUrl: 'https://tetouan-doctor.vercel.app/'
   
   },
@@ -114,7 +114,7 @@ liveUrl: 'https://azdoud.vercel.app',
     desc: 'Projet Desktop de gestion intégrée pour une agence de nettoyage de véhicules. Son but principal est dautomatiser le suivi des prestations et de fluidifier lorganisation quotidienne de lagence',
     tags:['VB.NET'],
     img:'/nettvb.png',
-    video:'https://youtu.be/iSRa1O6afHY',
+    video:'https://www.youtube.com/embed/iSRa1O6afHY?si=hih5konMaf6GJWch',
     liveUrl:'#'
   },
   {
@@ -123,7 +123,7 @@ title: 'OptiCloud : Optical Shop Management System',
 desc: 'Full-stack web application for Moroccan optical shops featuring complete inventory management, client records, prescriptions, point of sale, PDF reports, and a role-based authentication system with a professional SaaS landing page.',
 tags: ['PHP', 'MySQL', 'Bootstrap 5', 'FPDF', 'JavaScript'],
 img: '/screen8.png',
-video: '/videos/Opticloud.mp4',
+video: 'https://www.youtube.com/embed/FYAd20Yxftg?si=ETV55CRVv_ZWiUtF',
 liveUrl: '#',
   },
 ]
@@ -151,8 +151,7 @@ export default function ProjectPage() {
 
 <iframe
   src={project.video}
-  className="w-full h-80 rounded-xl" allowFullScreen
-/>
+  className="w-full h-80 rounded-xl" allowFullScreen/>
 
             </div>
 
