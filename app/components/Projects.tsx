@@ -14,23 +14,25 @@ const projects = [
     liveUrl: 'https://www.discovertetouan.com/',
   },
   
-      {
-    id: 15,
-    title: 'Physio Nord',
-    desc: 'Professional landing page for a real physiotherapy and rehabilitation center in Tétouan. Features a video hero section, services with photos, about section with stats, contact form and smooth scroll animations.',
-    tags: ['React', 'CSS', 'AOS'],
-    img: '/physionord.png',
-    liveUrl: 'https://physio-nord-8jpw.vercel.app/',
-},
-  {
-    id: 3,
-    title: 'Weather App',
-    desc: 'A weather application that shows real-time weather data for any city worldwide, with geolocation support.',
-    tags: ['Next.js', 'TypeScript', 'API'],
-    img: '/screen3.png',
-    video: '/videos/weather.mp4',
-    liveUrl: 'https://weather-app-ruby-nine-15.vercel.app/',
+   {
+   id: 7,
+    title: 'Tetouan Doctors : Medical Booking Platform',
+     desc: 'Full-stack appointment booking app for doctors in Tétouan. Patients browse specialists, book available slots, and doctors manage their schedule via a personal dashboard.',
+    tags: ['Next.js', 'Django', 'REST API', 'TypeScript'], 
+    img: '/doctor.png',
+     video: 'https://www.youtube.com/embed/V-fs8Iy6XmA?si=j4lLHVPjCWjZ9XVi',
+      liveUrl: 'https://tetouan-doctor.vercel.app/'
+  
   },
+  {
+    id: 14,
+    title: 'EV Charging Station Finder',
+    desc: 'Full stack app showing real EV charging stations in Morocco. Features city search, filtering, analytics dashboard with charts and top 10 ranking.',
+    tags: ['React', 'FastAPI', 'Python', 'Pydantic'],
+    img: '/screen9.png',
+    video: 'https://www.youtube.com/embed/Kl3oLZljcBk?si=ChNiiO3FAh59wIQf',
+    liveUrl: '#',
+},
 ]
 
 export default function Projects() {
