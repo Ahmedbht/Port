@@ -45,7 +45,7 @@ const allProjects = [
     desc: 'Professional construction website for a Moroccan company specializing in road infrastructure and residential buildings. Fully responsive with smooth scroll animations.',
     tags: ['Next.js', 'Tailwind CSS'],
     img: '/screen4.png',
-    video: '/videos/htn.mp4',
+    video: 'https://www.youtube.com/embed/hhJEbtqjMxk?si=KXP2dE_C6kagQ_t6',
     liveUrl: 'https://htnord.vercel.app/',
   },
   {
@@ -54,6 +54,7 @@ const allProjects = [
 desc: 'Full frontend car rental website for a Moroccan business featuring a luxury dark design, featured fleet section, WhatsApp booking integration, and fully responsive layout.',
 tags: ['Next.js', 'TypeScript', 'Tailwind CSS'],
 img: '/screen5.png',
+video: 'https://www.youtube.com/embed/T4szbVITFnM?si=EuwWjARb-D-Uk5L9',
 liveUrl: 'https://azdoud.vercel.app',
   },
   {
