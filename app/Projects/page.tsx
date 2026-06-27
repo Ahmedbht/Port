@@ -36,7 +36,7 @@ const allProjects = [
     desc: 'A weather application that shows real-time weather data for any city worldwide, with geolocation support.',
     tags: ['Next.js', 'TypeScript', 'API'],
     img: '/screen3.png',
-    video: '/videos/weather.mp4',
+    video: 'https://www.youtube.com/embed/K7qro_sUfbs?si=RWYPR6FhKAOhogCB',
     liveUrl: 'https://weather-app-ruby-nine-15.vercel.app/',
   },
   {
