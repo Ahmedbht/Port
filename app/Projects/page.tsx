@@ -2,24 +2,7 @@
 import Link from "next/link"
 
 const allProjects = [
-  {
-    id: 9,
-    title: 'Nettocar : Une agence de nettoyage de vehicules',
-    desc: 'Projet Desktop de gestion intégrée pour une agence de nettoyage de véhicules. Son but principal est dautomatiser le suivi des prestations et de fluidifier lorganisation quotidienne de lagence',
-    tags:['VB.NET'],
-    img:'/nettvb.png',
-    video:'/videos/nettocar.mp4',
-    liveUrl:'#'
-  },
-  {
-  id: 8,
-title: 'OptiCloud : Optical Shop Management System',
-desc: 'Full-stack web application for Moroccan optical shops featuring complete inventory management, client records, prescriptions, point of sale, PDF reports, and a role-based authentication system with a professional SaaS landing page.',
-tags: ['PHP', 'MySQL', 'Bootstrap 5', 'FPDF', 'JavaScript'],
-img: '/screen8.png',
-video: '/videos/Opticloud.mp4',
-liveUrl: '#',
-  },
+  
   {
   id: 10,
   title: 'Password Manager',
@@ -125,6 +108,24 @@ liveUrl: 'https://azdoud.vercel.app',
     img: '/physionord.png',
     liveUrl: 'https://physio-nord-8jpw.vercel.app/',
 },
+{
+    id: 9,
+    title: 'Nettocar : Une agence de nettoyage de vehicules',
+    desc: 'Projet Desktop de gestion intégrée pour une agence de nettoyage de véhicules. Son but principal est dautomatiser le suivi des prestations et de fluidifier lorganisation quotidienne de lagence',
+    tags:['VB.NET'],
+    img:'/nettvb.png',
+    video:'https://youtu.be/iSRa1O6afHY',
+    liveUrl:'#'
+  },
+  {
+  id: 8,
+title: 'OptiCloud : Optical Shop Management System',
+desc: 'Full-stack web application for Moroccan optical shops featuring complete inventory management, client records, prescriptions, point of sale, PDF reports, and a role-based authentication system with a professional SaaS landing page.',
+tags: ['PHP', 'MySQL', 'Bootstrap 5', 'FPDF', 'JavaScript'],
+img: '/screen8.png',
+video: '/videos/Opticloud.mp4',
+liveUrl: '#',
+  },
 ]
 
 export default function ProjectPage() {
@@ -148,10 +149,9 @@ export default function ProjectPage() {
   onError={e => { (e.target as HTMLImageElement).style.background = '#1a1a2e' }}
 />
 
-<video
+<iframe
   src={project.video}
-  controls
-  className="w-full h-80 bg-[#0a0a0a] block rounded-xl shadow-[0_0_20px_rgba(0,229,255,0.1)]"
+  className="w-full h-80 rounded-xl" allowFullScreen
 />
 
             </div>
