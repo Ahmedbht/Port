@@ -111,7 +111,7 @@ liveUrl: 'https://azdoud.vercel.app',
     tags: ['React', 'CSS', 'AOS'],
     img: '/physionord.png',
     video: 'https://www.youtube.com/embed/4cBDYsYmzMw?si=dLdutQ8gjGfG-Ver',
-    liveUrl: '#',
+    liveUrl: 'https://physio-nord-4pnw.vercel.app/',
 },
   {
     id: 1,
