@@ -22,6 +22,15 @@ const allProjects = [
     liveUrl: 'https://www.discovertetouan.com/',
   },
   {
+    id: 16,
+    title: 'GSK Product Tracker',
+    desc: 'Full-stack internal dashboard built for GSK to track cosmetic product launches across global markets. Features an interactive world map, revenue charts, multi-country launch management, news & articles system, role-based authentication (Admin/Viewer), and email notifications. Built with React, FastAPI, and MySQL.',
+    tags: ['React', 'FastAPI', 'MySQL', 'D3.js', 'JWT'],
+    img: '/pharma.png',
+    video: '',
+    liveUrl: 'https://trade-tracker-frontend-delta.vercel.app/',
+},
+  {
     id: 3,
     title: 'Weather App',
     desc: 'A weather application that shows real-time weather data for any city worldwide, with geolocation support.',
@@ -113,6 +122,7 @@ liveUrl: 'https://azdoud.vercel.app',
     video: 'https://www.youtube.com/embed/4cBDYsYmzMw?si=dLdutQ8gjGfG-Ver',
     liveUrl: 'https://physio-nord-4pnw.vercel.app/',
 },
+
   {
     id: 1,
     title: 'Titawen : Dairy Company Website',
