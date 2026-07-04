@@ -4,6 +4,9 @@ import './globals.css'
 export const metadata: Metadata = {
   title: 'Ahmed — Full Stack Developer',
   description: 'Portfolio of Ahmed, Full Stack Developer based in Tetouan, Morocco.',
+  icons:{
+    icon: '/Ab.png',
+  }
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
