@@ -3,15 +3,7 @@ import Link from "next/link"
 
 const allProjects = [
   
-  {
-  id: 10,
-  title: 'Password Manager',
-  desc: 'Desktop application for managing passwords securely. Features include adding, editing, deleting and searching passwords, random password generation, and AES-encrypted local storage using JSON.',
-  tags: ['Java', 'JavaFX', 'AES Encryption', 'Gson', 'Maven'],
-  img: '/JAVAAAPHOTO.png',
-  video: 'https://www.youtube.com/embed/tJizP0AY2ug?si=K5AdJ9nI_NIO_Xjs',
-  liveUrl: '#',
-},
+ 
   {
     id: 2,
     title: 'Discover Tetouan',
@@ -57,6 +49,15 @@ img: '/screen5.png',
 video: 'https://www.youtube.com/embed/T4szbVITFnM?si=EuwWjARb-D-Uk5L9',
 liveUrl: 'https://azdoud.vercel.app',
   },
+   {
+  id: 10,
+  title: 'Password Manager',
+  desc: 'Desktop application for managing passwords securely. Features include adding, editing, deleting and searching passwords, random password generation, and AES-encrypted local storage using JSON.',
+  tags: ['Java', 'JavaFX', 'AES Encryption', 'Gson', 'Maven'],
+  img: '/JAVAAAPHOTO.png',
+  video: 'https://www.youtube.com/embed/tJizP0AY2ug?si=K5AdJ9nI_NIO_Xjs',
+  liveUrl: '#',
+},
   {
     id: 6,
   title: 'GitHub Stats',
