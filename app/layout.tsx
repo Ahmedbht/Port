@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   title: 'Ahmed — Full Stack Developer',
   description: 'Portfolio of Ahmed, Full Stack Developer based in Tetouan, Morocco.',
   icons:{
-    icon: '/Ab.png',
+    icon: '/Ab-modified.png',
   }
 }
 
