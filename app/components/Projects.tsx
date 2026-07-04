@@ -31,7 +31,7 @@ const projects = [
     tags: ['React', 'FastAPI', 'Python', 'Pydantic'],
     img: '/screen9.png',
     video: 'https://www.youtube.com/embed/Kl3oLZljcBk?si=ChNiiO3FAh59wIQf',
-    liveUrl: '#',
+    liveUrl: 'https://ev-charging-frontend-ebon.vercel.app/',
 },
 ]
 
