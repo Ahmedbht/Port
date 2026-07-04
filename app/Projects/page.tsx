@@ -140,7 +140,7 @@ liveUrl: 'https://azdoud.vercel.app',
     tags:['VB.NET'],
     img:'/nettvb.png',
     video:'https://www.youtube.com/embed/iSRa1O6afHY?si=hih5konMaf6GJWch',
-    liveUrl:'#'
+    liveUrl:'https://github.com/Ahmedbht/Nettocar'
   },
   {
   id: 8,
@@ -149,7 +149,7 @@ desc: 'Full-stack web application for Moroccan optical shops featuring complete 
 tags: ['PHP', 'MySQL', 'Bootstrap 5', 'FPDF', 'JavaScript'],
 img: '/screen8.png',
 video: 'https://www.youtube.com/embed/FYAd20Yxftg?si=ETV55CRVv_ZWiUtF',
-liveUrl: '#',
+liveUrl: 'https://github.com/Ahmedbht/opticloud',
   },
 ]
 
