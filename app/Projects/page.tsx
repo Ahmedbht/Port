@@ -56,7 +56,7 @@ liveUrl: 'https://azdoud.vercel.app',
   tags: ['Java', 'JavaFX', 'AES Encryption', 'Gson', 'Maven'],
   img: '/JAVAAAPHOTO.png',
   video: 'https://www.youtube.com/embed/tJizP0AY2ug?si=K5AdJ9nI_NIO_Xjs',
-  liveUrl: '#',
+  liveUrl: 'https://github.com/Ahmedbht/password-manager',
 },
   {
     id: 6,
