@@ -27,7 +27,7 @@ const allProjects = [
     desc: 'Full-stack internal dashboard built for GSK to track cosmetic product launches across global markets. Features an interactive world map, revenue charts, multi-country launch management, news & articles system, role-based authentication (Admin/Viewer), and email notifications. Built with React, FastAPI, and MySQL.',
     tags: ['React', 'FastAPI', 'MySQL', 'D3.js', 'JWT'],
     img: '/pharma.png',
-    video: 'https://www.youtube.com/watch?v=edXDEQsFCow',
+    video: 'https://www.youtube.com/embed/edXDEQsFCow?si=kKvcnGozroBa7-HG',
     liveUrl: 'https://trade-tracker-frontend-delta.vercel.app/',
 },
   {
