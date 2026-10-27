@@ -115,6 +115,22 @@ liveUrl: 'https://azdoud.vercel.app',
     liveUrl: 'https://ev-charging-frontend-ebon.vercel.app/',
 },
   {
+    id: 17,
+    title: 'EV Finder (Mobile)',
+    desc: 'Flutter app showing live EV charging stations on a map, using the Open Charge Map API and flutter_map.',
+    tags: ['Flutter', 'Dart'],
+    img: '/ev-finder.png',
+    liveUrl: 'https://github.com/Ahmedbht/ev-finder',
+},
+  {
+    id: 18,
+    title: 'Savings Sim',
+    desc: 'Flutter goal-based savings calculator.',
+    tags: ['Flutter', 'Dart'],
+    img: '/savings-sim.png',
+    liveUrl: 'https://github.com/Ahmedbht/saving-sim',
+},
+  {
     id: 15,
     title: 'Physio Nord',
     desc: 'Professional landing page for a real physiotherapy and rehabilitation center in Tétouan. Features a video hero section, services with photos, about section with stats, contact form and smooth scroll animations.',
@@ -174,9 +190,11 @@ export default function ProjectPage() {
   onError={e => { (e.target as HTMLImageElement).style.background = '#1a1a2e' }}
 />
 
+{project.video && (
 <iframe
   src={project.video}
   className="w-full h-80 rounded-xl" allowFullScreen/>
+)}
 
             </div>
 

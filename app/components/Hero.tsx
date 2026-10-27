@@ -39,7 +39,7 @@ export default function Hero() {
       }}
     >
       <p style={{ color: '#aaa', fontSize: '55px', letterSpacing: '2px', marginBottom: '14px' }}>
-        Full Stack Developer
+        Full-Stack & Mobile Developer
       </p>
       <h1 style={{ fontSize: '72px', fontWeight: 700, color: '#fff', margin: 0, minHeight: '60px' }}>
         {displayed}

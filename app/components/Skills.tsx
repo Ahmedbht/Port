@@ -1,7 +1,7 @@
 'use client'
 
 const skills = [
-  'React','FastAPI','Python', 'TypeScript', 'Next.js', 'C', 'django','Java','Git', 'GitHub','HTML', 'CSS', 'JavaScript', 'PHP', 'VB.NET', 'Responsive Design', 'UI / UX Basics',
+  'React','FastAPI','Python', 'TypeScript', 'Next.js', 'C', 'Django','Java','Git', 'GitHub','HTML', 'CSS', 'JavaScript', 'PHP', 'VB.NET', 'Responsive Design', 'UI / UX Basics', 'Flutter', 'Dart', 'Firebase', 'CI/CD (Codemagic)', 'App Store / Google Play publishing',
   
 ]
 
