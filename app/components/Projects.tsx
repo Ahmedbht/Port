@@ -4,7 +4,37 @@ import { useEffect, useState, useRef } from 'react'
 import Link from 'next/link'
 
 const projects = [
- {
+  {
+    id: 18,
+    title: 'Horizon : Goal-Based Savings Planner',
+    desc: 'Flutter mobile app for planning savings goals like a car, a home, travel or retirement. A dashboard shows your total saved and monthly plan across all goals. Each goal has a compound-growth projection chart with milestones based on an expected annual return, and a "What if I saved…" slider that instantly shows how the finish date moves. Supports MAD, USD, EUR and GBP, with light and dark themes.',
+    tags: ['Flutter', 'Dart', 'Provider', 'fl_chart'],
+    img: '/flutter3.jpg',
+},
+  {
+    id: 19,
+    title: 'MediTrack : Medication Reminder',
+    desc: 'Flutter mobile app for tracking medications. Add each medication with its dosage, form and time, get reminder notifications, mark doses as taken or missed, and review your history on a calendar. An AI assistant (Gemini) explains what a medication is used for. Available in English, French and Arabic.',
+    tags: ['Flutter', 'Dart', 'Local Notifications', 'Gemini AI'],
+    img: '/flutter1.jpg',
+},
+  {
+    id: 17,
+    title: 'EV Finder : Mobile Charging Station Map',
+    desc: 'Flutter mobile app that finds EV charging stations near you on a live OpenStreetMap map, using real-time data from the Open Charge Map API. Tap a station to see its address, connector types and number of charging points, and save your favorite stations on the device.',
+    tags: ['Flutter', 'Dart', 'flutter_map', 'Open Charge Map API'],
+    img: '/flutter2.jpg',
+},
+  {
+    id: 16,
+    title: 'GSK Product Tracker',
+    desc: 'Full-stack internal dashboard built for GSK to track cosmetic product launches across global markets. Features an interactive world map, revenue charts, multi-country launch management, news & articles system, role-based authentication (Admin/Viewer), and email notifications. Built with React, FastAPI, and MySQL.',
+    tags: ['React', 'FastAPI', 'MySQL', 'D3.js', 'JWT'],
+    img: '/pharma.png',
+    video: 'https://www.youtube.com/embed/edXDEQsFCow?si=kKvcnGozroBa7-HG',
+    liveUrl: 'https://trade-tracker-frontend-delta.vercel.app/',
+},
+  {
     id: 2,
     title: 'Discover Tetouan',
     desc: 'Tourist guide website for the city of Tétouan, launched and ranked on Google Search under (Discover Tetouan). Features local attractions, culture, and travel tips. Currently migrating to React.',
@@ -13,8 +43,7 @@ const projects = [
     video: '/videos/tetouan.mp4',
     liveUrl: 'https://www.discovertetouan.com/',
   },
-  
-   {
+  {
    id: 7,
     title: 'Tetouan Doctors : Medical Booking Platform',
      desc: 'Full-stack appointment booking app for doctors in Tétouan. Patients browse specialists, book available slots, and doctors manage their schedule via a personal dashboard.',
@@ -32,27 +61,6 @@ const projects = [
     img: '/screen9.png',
     video: 'https://www.youtube.com/embed/Kl3oLZljcBk?si=ChNiiO3FAh59wIQf',
     liveUrl: 'https://ev-charging-frontend-ebon.vercel.app/',
-},
-  {
-    id: 17,
-    title: 'EV Finder : Mobile Charging Station Map',
-    desc: 'Flutter mobile app that finds EV charging stations near you on a live OpenStreetMap map, using real-time data from the Open Charge Map API. Tap a station to see its address, connector types and number of charging points, and save your favorite stations on the device.',
-    tags: ['Flutter', 'Dart', 'flutter_map', 'Open Charge Map API'],
-    img: '/flutter2.jpg',
-},
-  {
-    id: 18,
-    title: 'Horizon : Goal-Based Savings Planner',
-    desc: 'Flutter mobile app for planning savings goals like a car, a home, travel or retirement. A dashboard shows your total saved and monthly plan across all goals. Each goal has a compound-growth projection chart with milestones based on an expected annual return, and a "What if I saved…" slider that instantly shows how the finish date moves. Supports MAD, USD, EUR and GBP, with light and dark themes.',
-    tags: ['Flutter', 'Dart', 'Provider', 'fl_chart'],
-    img: '/flutter3.jpg',
-},
-  {
-    id: 19,
-    title: 'MediTrack : Medication Reminder',
-    desc: 'Flutter mobile app for tracking medications. Add each medication with its dosage, form and time, get reminder notifications, mark doses as taken or missed, and review your history on a calendar. An AI assistant (Gemini) explains what a medication is used for. Available in English, French and Arabic.',
-    tags: ['Flutter', 'Dart', 'Local Notifications', 'Gemini AI'],
-    img: '/flutter1.jpg',
 },
 ]
 

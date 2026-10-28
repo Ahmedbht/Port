@@ -2,17 +2,27 @@
 import Link from "next/link"
 
 const allProjects = [
-  
- 
   {
-    id: 2,
-    title: 'Discover Tetouan',
-    desc: 'Tourist guide website for the city of Tétouan, launched and ranked on Google Search under (Discover Tetouan). Features local attractions, culture, and travel tips. Currently migrating to React.',
-    tags: ['HTML', 'CSS', 'JavaScript'],
-    img: '/screen2.png',
-    video: 'https://www.youtube.com/embed/LmCbASnAeas?si=8reO1DuvIvGuM9je',
-    liveUrl: 'https://www.discovertetouan.com/',
-  },
+    id: 18,
+    title: 'Horizon : Goal-Based Savings Planner',
+    desc: 'Flutter mobile app for planning savings goals like a car, a home, travel or retirement. A dashboard shows your total saved and monthly plan across all goals. Each goal has a compound-growth projection chart with milestones based on an expected annual return, and a "What if I saved…" slider that instantly shows how the finish date moves. Supports MAD, USD, EUR and GBP, with light and dark themes.',
+    tags: ['Flutter', 'Dart', 'Provider', 'fl_chart'],
+    img: '/flutter3.jpg',
+},
+  {
+    id: 19,
+    title: 'MediTrack : Medication Reminder',
+    desc: 'Flutter mobile app for tracking medications. Add each medication with its dosage, form and time, get reminder notifications, mark doses as taken or missed, and review your history on a calendar. An AI assistant (Gemini) explains what a medication is used for. Available in English, French and Arabic.',
+    tags: ['Flutter', 'Dart', 'Local Notifications', 'Gemini AI'],
+    img: '/flutter1.jpg',
+},
+  {
+    id: 17,
+    title: 'EV Finder : Mobile Charging Station Map',
+    desc: 'Flutter mobile app that finds EV charging stations near you on a live OpenStreetMap map, using real-time data from the Open Charge Map API. Tap a station to see its address, connector types and number of charging points, and save your favorite stations on the device.',
+    tags: ['Flutter', 'Dart', 'flutter_map', 'Open Charge Map API'],
+    img: '/flutter2.jpg',
+},
   {
     id: 16,
     title: 'GSK Product Tracker',
@@ -22,6 +32,15 @@ const allProjects = [
     video: 'https://www.youtube.com/embed/edXDEQsFCow?si=kKvcnGozroBa7-HG',
     liveUrl: 'https://trade-tracker-frontend-delta.vercel.app/',
 },
+  {
+    id: 2,
+    title: 'Discover Tetouan',
+    desc: 'Tourist guide website for the city of Tétouan, launched and ranked on Google Search under (Discover Tetouan). Features local attractions, culture, and travel tips. Currently migrating to React.',
+    tags: ['HTML', 'CSS', 'JavaScript'],
+    img: '/screen2.png',
+    video: 'https://www.youtube.com/embed/LmCbASnAeas?si=8reO1DuvIvGuM9je',
+    liveUrl: 'https://www.discovertetouan.com/',
+  },
   {
     id: 3,
     title: 'Weather App',
@@ -49,7 +68,7 @@ img: '/screen5.png',
 video: 'https://www.youtube.com/embed/T4szbVITFnM?si=EuwWjARb-D-Uk5L9',
 liveUrl: 'https://azdoud.vercel.app',
   },
-   {
+  {
   id: 10,
   title: 'Password Manager',
   desc: 'Desktop application for managing passwords securely. Features include adding, editing, deleting and searching passwords, random password generation, and AES-encrypted local storage using JSON.',
@@ -67,8 +86,7 @@ liveUrl: 'https://azdoud.vercel.app',
   video: 'https://www.youtube.com/embed/2_-73TovAeg?si=qJG_1VidrTRaOn0H',
   liveUrl: 'https://github-stats-xi-dun-58.vercel.app/',
   },
-  
-    {
+  {
    id: 7,
     title: 'Tetouan Doctors : Medical Booking Platform',
      desc: 'Full-stack appointment booking app for doctors in Tétouan. Patients browse specialists, book available slots, and doctors manage their schedule via a personal dashboard.',
@@ -96,7 +114,7 @@ liveUrl: 'https://azdoud.vercel.app',
     video: 'https://www.youtube.com/embed/EUfg2ty_Gjw?si=mLhTM4mRPkxz6mKw',
     liveUrl: 'https://github.com/Ahmedbht/history-quiz',
 },
-{
+  {
     id: 16,
     title: 'Readone',
     desc: 'Professional landing page for a real physiotherapy and rehabilitation center in Tétouan. Features a video hero section, services with photos, about section with stats, contact form and smooth scroll animations.',
@@ -115,27 +133,6 @@ liveUrl: 'https://azdoud.vercel.app',
     liveUrl: 'https://ev-charging-frontend-ebon.vercel.app/',
 },
   {
-    id: 17,
-    title: 'EV Finder : Mobile Charging Station Map',
-    desc: 'Flutter mobile app that finds EV charging stations near you on a live OpenStreetMap map, using real-time data from the Open Charge Map API. Tap a station to see its address, connector types and number of charging points, and save your favorite stations on the device.',
-    tags: ['Flutter', 'Dart', 'flutter_map', 'Open Charge Map API'],
-    img: '/flutter2.jpg',
-},
-  {
-    id: 18,
-    title: 'Horizon : Goal-Based Savings Planner',
-    desc: 'Flutter mobile app for planning savings goals like a car, a home, travel or retirement. A dashboard shows your total saved and monthly plan across all goals. Each goal has a compound-growth projection chart with milestones based on an expected annual return, and a "What if I saved…" slider that instantly shows how the finish date moves. Supports MAD, USD, EUR and GBP, with light and dark themes.',
-    tags: ['Flutter', 'Dart', 'Provider', 'fl_chart'],
-    img: '/flutter3.jpg',
-},
-  {
-    id: 19,
-    title: 'MediTrack : Medication Reminder',
-    desc: 'Flutter mobile app for tracking medications. Add each medication with its dosage, form and time, get reminder notifications, mark doses as taken or missed, and review your history on a calendar. An AI assistant (Gemini) explains what a medication is used for. Available in English, French and Arabic.',
-    tags: ['Flutter', 'Dart', 'Local Notifications', 'Gemini AI'],
-    img: '/flutter1.jpg',
-},
-  {
     id: 15,
     title: 'Physio Nord',
     desc: 'Professional landing page for a real physiotherapy and rehabilitation center in Tétouan. Features a video hero section, services with photos, about section with stats, contact form and smooth scroll animations.',
@@ -144,7 +141,6 @@ liveUrl: 'https://azdoud.vercel.app',
     video: 'https://www.youtube.com/embed/4cBDYsYmzMw?si=dLdutQ8gjGfG-Ver',
     liveUrl: 'https://physio-nord-4pnw.vercel.app/',
 },
-
   {
     id: 1,
     title: 'Titawen : Dairy Company Website',
@@ -154,7 +150,7 @@ liveUrl: 'https://azdoud.vercel.app',
     video: '/videos/titawen.mp4',
     liveUrl: 'https://titawen-frontend.vercel.app/',
   },
-{
+  {
     id: 9,
     title: 'Nettocar : Une agence de nettoyage de vehicules',
     desc: 'Projet Desktop de gestion intégrée pour une agence de nettoyage de véhicules. Son but principal est dautomatiser le suivi des prestations et de fluidifier lorganisation quotidienne de lagence',
