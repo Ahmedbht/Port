@@ -116,19 +116,24 @@ liveUrl: 'https://azdoud.vercel.app',
 },
   {
     id: 17,
-    title: 'EV Finder (Mobile)',
-    desc: 'Flutter app showing live EV charging stations on a map, using the Open Charge Map API and flutter_map.',
-    tags: ['Flutter', 'Dart'],
+    title: 'EV Finder : Mobile Charging Station Map',
+    desc: 'Flutter mobile app that finds EV charging stations near you on a live OpenStreetMap map, using real-time data from the Open Charge Map API. Tap a station to see its address, connector types and number of charging points, and save your favorite stations on the device.',
+    tags: ['Flutter', 'Dart', 'flutter_map', 'Open Charge Map API'],
     img: '/ev-finder.png',
-    liveUrl: 'https://github.com/Ahmedbht/ev-finder',
 },
   {
     id: 18,
-    title: 'Savings Sim',
-    desc: 'Flutter goal-based savings calculator.',
+    title: 'Savings Sim : Goal Savings Calculator',
+    desc: 'Flutter mobile app that shows how long it will take to reach a savings goal. Pick a goal (car, home or general savings), enter the target price and how much you save each month, choose a currency ($, €, £ or MAD), and get the time needed in years and months.',
     tags: ['Flutter', 'Dart'],
     img: '/savings-sim.png',
-    liveUrl: 'https://github.com/Ahmedbht/saving-sim',
+},
+  {
+    id: 19,
+    title: 'MediTrack : Medication Reminder',
+    desc: 'Flutter mobile app for tracking medications. Add each medication with its dosage, form and time, get reminder notifications, mark doses as taken or missed, and review your history on a calendar. An AI assistant (Gemini) explains what a medication is used for. Available in English, French and Arabic.',
+    tags: ['Flutter', 'Dart', 'Local Notifications', 'Gemini AI'],
+    img: '/flutter1.jpg',
 },
   {
     id: 15,
@@ -208,7 +213,9 @@ export default function ProjectPage() {
                 </span>
               ))}
             </div>
+            {project.liveUrl && (
             <a href={project.liveUrl} className=" text-sm no-underline border rounded-full bg-[#00e5ff] p-2">Website link</a>
+            )}
 
           </div>
         ))}

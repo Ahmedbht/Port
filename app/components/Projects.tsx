@@ -35,19 +35,24 @@ const projects = [
 },
   {
     id: 17,
-    title: 'EV Finder (Mobile)',
-    desc: 'Flutter app showing live EV charging stations on a map, using the Open Charge Map API and flutter_map.',
-    tags: ['Flutter', 'Dart'],
+    title: 'EV Finder : Mobile Charging Station Map',
+    desc: 'Flutter mobile app that finds EV charging stations near you on a live OpenStreetMap map, using real-time data from the Open Charge Map API. Tap a station to see its address, connector types and number of charging points, and save your favorite stations on the device.',
+    tags: ['Flutter', 'Dart', 'flutter_map', 'Open Charge Map API'],
     img: '/ev-finder.png',
-    liveUrl: 'https://github.com/Ahmedbht/ev-finder',
 },
   {
     id: 18,
-    title: 'Savings Sim',
-    desc: 'Flutter goal-based savings calculator.',
+    title: 'Savings Sim : Goal Savings Calculator',
+    desc: 'Flutter mobile app that shows how long it will take to reach a savings goal. Pick a goal (car, home or general savings), enter the target price and how much you save each month, choose a currency ($, €, £ or MAD), and get the time needed in years and months.',
     tags: ['Flutter', 'Dart'],
     img: '/savings-sim.png',
-    liveUrl: 'https://github.com/Ahmedbht/saving-sim',
+},
+  {
+    id: 19,
+    title: 'MediTrack : Medication Reminder',
+    desc: 'Flutter mobile app for tracking medications. Add each medication with its dosage, form and time, get reminder notifications, mark doses as taken or missed, and review your history on a calendar. An AI assistant (Gemini) explains what a medication is used for. Available in English, French and Arabic.',
+    tags: ['Flutter', 'Dart', 'Local Notifications', 'Gemini AI'],
+    img: '/flutter1.jpg',
 },
 ]
 
@@ -102,7 +107,9 @@ export default function Projects() {
                     <span key={tag} style={{ padding: '6px 12px', background: 'rgba(255,255,255,0.08)', borderRadius: '20px', fontSize: '13px', color: 'white' }}>{tag}</span>
                   ))}
                 </div>
-                <a href={project.liveUrl} style={{ marginRight: '15px', color: '#00e5ff', textDecoration: 'none', fontSize: '14px' }}>Live</a>
+                {project.liveUrl && (
+                  <a href={project.liveUrl} style={{ marginRight: '15px', color: '#00e5ff', textDecoration: 'none', fontSize: '14px' }}>Live</a>
+                )}
                 
               </div>
             </div>
@@ -118,7 +125,9 @@ export default function Projects() {
               <span key={tag} style={{ padding: '6px 12px', background: 'rgba(255,255,255,0.08)', borderRadius: '20px', fontSize: '13px', color: 'white' }}>{tag}</span>
             ))}
           </div>
-          <a href={active.liveUrl} style={{padding: '10px 26px', borderRadius: '30px', background: '#00e5ff', color: '#000', textDecoration: 'none', fontSize: '16px', fontWeight: 500 }}>Website link</a>
+          {active.liveUrl && (
+            <a href={active.liveUrl} style={{padding: '10px 26px', borderRadius: '30px', background: '#00e5ff', color: '#000', textDecoration: 'none', fontSize: '16px', fontWeight: 500 }}>Website link</a>
+          )}
          
         </div>
       </div>
