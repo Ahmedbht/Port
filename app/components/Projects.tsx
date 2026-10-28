@@ -26,6 +26,14 @@ const projects = [
     img: '/flutter2.jpg',
 },
   {
+    id: 20,
+    title: 'Dotrova : AI Domain Scout',
+    desc: 'AI domain scout that watches tech trends and finds valuable domain names before anyone registers them. It reads new posts from Hacker News, GitHub, Lobsters and Product Hunt, spots rising words, generates brandable .com, .ai and .si names, confirms availability with DNS and the official registry (RDAP), and scores each one like a domain investor, including a Flip score for cost vs. value. Features a live Scout Log streamed with Server-Sent Events, a Daily Catch of the top domains rebuilt every day, and Portfolio Watch for domains you own. A GitHub Actions pipeline refreshes the data every 12 hours, for $0 running cost.',
+    tags: ['React', 'TypeScript', 'Tailwind CSS', 'FastAPI', 'Python', 'GitHub Actions'],
+    img: '/dotrova.png',
+    liveUrl: 'https://dotrova.onrender.com',
+},
+  {
     id: 16,
     title: 'GSK Product Tracker',
     desc: 'Full-stack internal dashboard built for GSK to track cosmetic product launches across global markets. Features an interactive world map, revenue charts, multi-country launch management, news & articles system, role-based authentication (Admin/Viewer), and email notifications. Built with React, FastAPI, and MySQL.',
