@@ -38,7 +38,7 @@ const projects = [
     title: 'EV Finder : Mobile Charging Station Map',
     desc: 'Flutter mobile app that finds EV charging stations near you on a live OpenStreetMap map, using real-time data from the Open Charge Map API. Tap a station to see its address, connector types and number of charging points, and save your favorite stations on the device.',
     tags: ['Flutter', 'Dart', 'flutter_map', 'Open Charge Map API'],
-    img: '/ev-finder.png',
+    img: '/flutter2.jpg',
 },
   {
     id: 18,
