@@ -2,6 +2,7 @@
 
 import { useEffect, useState, useRef } from 'react'
 import Link from 'next/link'
+import SectionTitle from './SectionTitle'
 
 const projects = [
   {
@@ -72,6 +73,14 @@ const projects = [
 },
 ]
 
+// "Horizon : Goal-Based Savings Planner" -> name + subtitle
+const splitTitle = (title: string) => {
+  const [name, ...rest] = title.split(' : ')
+  return { name, subtitle: rest.join(' : ') }
+}
+
+const tagStyle = { padding: '6px 13px', border: '1px solid var(--line)', borderRadius: '20px', fontSize: '12px', color: 'var(--blue)', fontWeight: 500 }
+
 export default function Projects() {
   const [active, setActive] = useState(projects[0])
   const cardRefs = useRef<(HTMLDivElement | null)[]>([])
@@ -92,64 +101,72 @@ export default function Projects() {
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
+  const activeIndex = projects.indexOf(active)
+  const activeTitle = splitTitle(active.title)
+
   return (
-    <section id="projects" style={{ padding: '100px 10%', background: '#000' }}>
-      <h2 style={{ fontSize: '36px', marginBottom: '50px', color: 'white', textAlign: 'center' }}>
-        My Projects
-      </h2>
+    <section id="projects" style={{ padding: '110px 6%', background: 'var(--cream)' }}>
+      <SectionTitle eyebrow="01 — Selected work" title="Projects" />
 
       <div style={{ display: 'grid', gridTemplateColumns: '55% 45%', gap: '60px', alignItems: 'start' }} className="projects-wrapper">
 
         {/* LEFT: project images */}
-        <div style={{ display: 'flex', flexDirection: 'column', gap: '140px' }}>
-          {projects.map((project, i) => (
+        <div style={{ display: 'flex', flexDirection: 'column', gap: '120px' }}>
+          {projects.map((project, i) => {
+            const t = splitTitle(project.title)
+            return (
             <div
               key={project.id}
               ref={el => { cardRefs.current[i] = el }}
-              style={{ borderRadius: '20px', padding: '20px', cursor: 'pointer' }}
+              style={{ cursor: 'pointer' }}
             >
               <img
                 src={project.img}
                 alt={project.title}
-                style={{ width: '100%', height: '360px', background: '#1a1a2e', borderRadius: '15px', objectFit: 'cover', display: 'block' }}
-                onError={e => { (e.target as HTMLImageElement).style.background = '#1a1a2e' }}
+                style={{ width: '100%', height: '360px', background: 'var(--cream-deep)', borderRadius: '18px', border: '1px solid var(--line)', objectFit: 'cover', display: 'block', boxShadow: '0 24px 48px -28px rgba(30,36,138,0.45)' }}
+                onError={e => { (e.target as HTMLImageElement).style.background = 'var(--cream-deep)' }}
               />
               {/* Mobile content */}
-              <div className="mobile-project-content" style={{ display: 'none', marginTop: '20px', background: 'rgba(0,229,255,0.05)', border: '1px solid rgba(0,229,255,0.2)', padding: '20px', borderRadius: '15px' }}>
-                <h3 style={{ color: '#00e5ff', marginTop: 0, marginBottom: '15px' }}>{project.title}</h3>
-<p style={{ color: '#fff', lineHeight: 1.5, marginBottom: '15px' }}>{project.desc}</p>
-                <div style={{ display: 'flex', gap: '8px', flexWrap: 'wrap', marginBottom: '15px' }}>
+              <div className="mobile-project-content" style={{ display: 'none', marginTop: '18px', background: 'var(--card)', border: '1px solid var(--line)', padding: '22px', borderRadius: '18px' }}>
+                <p style={{ color: 'var(--blue)', fontSize: '11px', fontWeight: 600, letterSpacing: '3px', margin: '0 0 8px' }}>{String(i + 1).padStart(2, '0')}</p>
+                <h3 style={{ fontFamily: 'var(--font-display)', fontWeight: 400, fontSize: '28px', color: 'var(--blue)', textTransform: 'uppercase', margin: 0 }}>{t.name}</h3>
+                {t.subtitle && <p style={{ color: 'var(--muted)', fontSize: '13px', letterSpacing: '1px', margin: '4px 0 0' }}>{t.subtitle}</p>}
+                <p style={{ color: 'var(--ink)', lineHeight: 1.6, margin: '14px 0' }}>{project.desc}</p>
+                <div style={{ display: 'flex', gap: '8px', flexWrap: 'wrap', marginBottom: '16px' }}>
                   {project.tags.map(tag => (
-                    <span key={tag} style={{ padding: '6px 12px', background: 'rgba(255,255,255,0.08)', borderRadius: '20px', fontSize: '13px', color: 'white' }}>{tag}</span>
+                    <span key={tag} style={tagStyle}>{tag}</span>
                   ))}
                 </div>
                 {project.liveUrl && (
-                  <a href={project.liveUrl} style={{ marginRight: '15px', color: '#00e5ff', textDecoration: 'none', fontSize: '14px' }}>Live</a>
+                  <a href={project.liveUrl} style={{ color: 'var(--blue)', textDecoration: 'none', fontSize: '14px', fontWeight: 600 }}>Visit website ↗</a>
                 )}
-                
               </div>
             </div>
-          ))}
+            )
+          })}
         </div>
 
         {/* RIGHT: sticky panel */}
-        <div className="sticky-panel" style={{ position: 'sticky', top: '20vh', background: 'rgba(0,229,255,0.05)', border: '1px solid rgba(0,229,255,0.2)', padding: '30px', borderRadius: '15px', transition: 'all 0.4s ease' }}>
-          <h3 style={{ color: '#00e5ff', marginTop: 0, marginBottom: '20px', fontSize: '24px' }}>{active.title}</h3>
-          <p style={{ color: '#fff', lineHeight: 1.5, marginBottom: '20px' }}>{active.desc}</p>
-          <div style={{ display: 'flex', gap: '10px', flexWrap: 'wrap', marginBottom: '20px' }}>
+        <div className="sticky-panel" style={{ position: 'sticky', top: '18vh', background: 'var(--card)', border: '1px solid var(--line)', padding: '34px', borderRadius: '20px', boxShadow: '0 24px 48px -32px rgba(30,36,138,0.35)' }}>
+          <p style={{ color: 'var(--blue)', fontSize: '12px', fontWeight: 600, letterSpacing: '3px', margin: '0 0 14px' }}>
+            {String(activeIndex + 1).padStart(2, '0')} / {String(projects.length).padStart(2, '0')}
+          </p>
+          <h3 style={{ fontFamily: 'var(--font-display)', fontWeight: 400, fontSize: '40px', lineHeight: 1, color: 'var(--blue)', textTransform: 'uppercase', margin: 0 }}>{activeTitle.name}</h3>
+          {activeTitle.subtitle && <p style={{ color: 'var(--muted)', fontSize: '14px', letterSpacing: '1px', margin: '8px 0 0' }}>{activeTitle.subtitle}</p>}
+          <p style={{ color: 'var(--ink)', lineHeight: 1.65, margin: '20px 0' }}>{active.desc}</p>
+          <div style={{ display: 'flex', gap: '8px', flexWrap: 'wrap', marginBottom: active.liveUrl ? '26px' : 0 }}>
             {active.tags.map(tag => (
-              <span key={tag} style={{ padding: '6px 12px', background: 'rgba(255,255,255,0.08)', borderRadius: '20px', fontSize: '13px', color: 'white' }}>{tag}</span>
+              <span key={tag} style={tagStyle}>{tag}</span>
             ))}
           </div>
           {active.liveUrl && (
-            <a href={active.liveUrl} style={{padding: '10px 26px', borderRadius: '30px', background: '#00e5ff', color: '#000', textDecoration: 'none', fontSize: '16px', fontWeight: 500 }}>Website link</a>
+            <a href={active.liveUrl} style={{ display: 'inline-block', padding: '12px 26px', borderRadius: '30px', background: 'var(--blue)', color: '#fff', textDecoration: 'none', fontSize: '15px', fontWeight: 500 }}>Visit website ↗</a>
           )}
-         
         </div>
       </div>
 
-      <div style={{ marginTop: '80px', textAlign: 'center' }}>
-        <Link href="/Projects" style={{ padding: '16px 36px', borderRadius: '30px', background: '#00e5ff', color: '#000', textDecoration: 'none', fontSize: '16px', fontWeight: 500 }}>
+      <div style={{ marginTop: '90px', textAlign: 'center' }}>
+        <Link href="/Projects" style={{ display: 'inline-block', padding: '16px 36px', borderRadius: '30px', border: '1.5px solid var(--blue)', color: 'var(--blue)', textDecoration: 'none', fontSize: '15px', fontWeight: 600, letterSpacing: '1px' }}>
           View All Projects →
         </Link>
       </div>

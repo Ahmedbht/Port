@@ -1,1 +1,58 @@
 @import "tailwindcss";
+
+:root {
+  --cream: #f3ece1;
+  --cream-deep: #ebe1d1;
+  --card: #fbf8f2;
+  --sand: #dccbab;
+  --blue: #2b33b8;
+  --blue-dark: #1e248a;
+  --ink: #1b1b2f;
+  --muted: #5f5f73;
+  --line: rgba(43, 51, 184, 0.16);
+  --sidebar: 48px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body), system-ui, sans-serif;
+  color: var(--ink);
+}
+
+::selection {
+  background: var(--blue);
+  color: #fff;
+}
+
+/* leave room for the fixed sidebar on desktop */
+@media (min-width: 1025px) {
+  .with-sidebar {
+    padding-left: var(--sidebar);
+  }
+}
+
+@keyframes rise {
+  from { opacity: 0; transform: translateY(24px); }
+  to { opacity: 1; transform: none; }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-14px); }
+}
+
+.reveal {
+  animation: rise 0.9s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+}
+
+.float {
+  animation: float 7s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .reveal, .float { animation: none; }
+}

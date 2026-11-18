@@ -1,4 +1,5 @@
 import React from 'react'
+import SectionTitle from './SectionTitle'
 
 const items = [
   { side: 'left',  icon: '🎓', degree: 'Bachelor in Computer Science',   place: 'SUPISI',            date: '2024 – 2027' },
@@ -8,34 +9,40 @@ const items = [
 
 export default function Education() {
   return (
-    <section style={{ background: '#000', padding: '120px 0', color: 'white', overflow: 'hidden' }}>
-      <h2 style={{ fontSize: '36px', marginBottom: '50px', textAlign: 'center' }}>Education</h2>
-      <div style={{ maxWidth: '900px', margin: 'auto', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '29px', padding: '0 20px' }}>
+    <section id="education" style={{ background: 'var(--cream)', padding: '110px 6%', overflow: 'hidden' }}>
+      <SectionTitle eyebrow="03 — Path" title="Education" align="center" />
+      <div style={{ maxWidth: '900px', margin: 'auto', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '26px' }}>
         {items.map((item, i) => (
           <React.Fragment key={item.degree}>
             <div
               style={{
                 width: '520px',
-                height: '170px',
                 maxWidth: '100%',
-                padding: '30px',
-                background: 'rgba(255,255,255,0.06)',
+                padding: '30px 32px',
+                background: 'var(--card)',
+                border: '1px solid var(--line)',
                 borderRadius: '20px',
-                backdropFilter: 'blur(12px)',
-                boxShadow: '0 0 40px rgba(0,229,255,0.12)',
+                boxShadow: '0 24px 48px -34px rgba(30,36,138,0.4)',
                 alignSelf: item.side === 'left' ? 'flex-start' : 'flex-end',
               }}
+              className="edu-card"
             >
-              <h3 style={{ margin: '0 0 8px', fontSize: '18px' }}>{item.icon} {item.degree}</h3>
-              <p style={{ color: '#aaa', margin: '4px 0' }}>{item.place}</p>
-              <span style={{ color: '#00e5ff', fontSize: '13px' }}>{item.date}</span>
+              <span style={{ fontFamily: 'var(--font-display)', fontSize: '30px', color: 'var(--blue)' }}>{item.date}</span>
+              <h3 style={{ margin: '10px 0 6px', fontSize: '19px', fontWeight: 600, color: 'var(--ink)' }}>{item.icon} {item.degree}</h3>
+              <p style={{ color: 'var(--muted)', margin: 0, fontSize: '12px', fontWeight: 600, letterSpacing: '3px' }}>{item.place}</p>
             </div>
             {i < items.length - 1 && (
-              <div style={{ width: '14px', height: '14px', background: '#00e5ff', borderRadius: '50%', boxShadow: '0 0 20px rgba(0,229,255,0.9)' }} />
+              <div style={{ width: '12px', height: '12px', background: 'var(--blue)', borderRadius: '50%', boxShadow: '0 0 0 6px rgba(43,51,184,0.12)' }} />
             )}
           </React.Fragment>
         ))}
       </div>
+
+      <style>{`
+        @media (max-width: 768px) {
+          .edu-card { align-self: stretch !important; }
+        }
+      `}</style>
     </section>
   )
 }

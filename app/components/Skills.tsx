@@ -1,44 +1,46 @@
 'use client'
+import SectionTitle from './SectionTitle'
 
 const skills = [
   'React','FastAPI','Python', 'TypeScript', 'Next.js', 'C', 'Django','Java','Git', 'GitHub','HTML', 'CSS', 'JavaScript', 'PHP', 'VB.NET', 'Responsive Design', 'UI / UX Basics', 'Flutter', 'Dart', 'Firebase', 'CI/CD (Codemagic)', 'App Store / Google Play publishing',
-  
+
 ]
 
 export default function Skills() {
   return (
-    <section id="skills" style={{ padding: '60px 10%', textAlign: 'center', background: '#000' }}>
-      <h2 style={{ fontSize: '36px', marginBottom: '10px', color: 'white' }}>Skills</h2>
-      <p style={{ color: '#aaa', letterSpacing: '2px', fontSize: '17px', marginTop: '10px' }}>
+    <section id="skills" style={{ padding: '110px 6%', background: 'var(--cream-deep)', borderTop: '1px solid var(--line)', borderBottom: '1px solid var(--line)' }}>
+      <SectionTitle eyebrow="02 — What I use" title="Skills" />
+      <p style={{ color: 'var(--muted)', letterSpacing: '1px', fontSize: '16px', margin: '-24px 0 0' }}>
         I constantly try to improve
       </p>
-      <div style={{ marginTop: '26px', display: 'flex', flexWrap: 'wrap', gap: '18px', justifyContent: 'center' }}>
+      <div style={{ marginTop: '34px', display: 'flex', flexWrap: 'wrap', gap: '14px' }}>
         {skills.map(skill => (
           <span
             key={skill}
             style={{
               padding: '12px 22px',
               borderRadius: '999px',
-              background: 'rgba(255,255,255,0.06)',
-              color: '#fff',
+              background: 'var(--card)',
+              color: 'var(--ink)',
               fontSize: '14px',
-              border: '1px solid rgba(255,255,255,0.12)',
+              fontWeight: 500,
+              border: '1px solid var(--line)',
               cursor: 'default',
               transition: 'all 0.35s ease',
             }}
             onMouseEnter={e => {
               const el = e.currentTarget
               el.style.transform = 'translateY(-4px)'
-              el.style.background = 'rgba(0,229,255,0.15)'
-              el.style.borderColor = '#00e5ff'
-              el.style.color = '#00e5ff'
+              el.style.background = 'var(--blue)'
+              el.style.borderColor = 'var(--blue)'
+              el.style.color = '#fff'
             }}
             onMouseLeave={e => {
               const el = e.currentTarget
               el.style.transform = 'none'
-              el.style.background = 'rgba(255,255,255,0.06)'
-              el.style.borderColor = 'rgba(255,255,255,0.12)'
-              el.style.color = '#fff'
+              el.style.background = 'var(--card)'
+              el.style.borderColor = 'var(--line)'
+              el.style.color = 'var(--ink)'
             }}
           >
             {skill}

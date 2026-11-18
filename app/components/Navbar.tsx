@@ -2,8 +2,9 @@
 
 import { useState, useEffect } from 'react'
 const navLinks = [
-  { label: 'Home', href: '#home' },
   { label: 'Projects', href: '#projects' },
+  { label: 'Skills', href: '#skills' },
+  { label: 'Education', href: '#education' },
   { label: 'About', href: '#about' },
   { label: 'Contact', href: '#contact' },
 ]
@@ -11,10 +12,12 @@ const navLinks = [
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false)
   const [activeSection, setActiveSection] = useState('home')
+  const [scrolled, setScrolled] = useState(false)
 
   useEffect(() => {
     const handleScroll = () => {
-      const sections = ['home', 'projects', 'about', 'contact']
+      setScrolled(window.scrollY > 20)
+      const sections = ['home', 'projects', 'skills', 'education', 'about', 'contact']
       for (const id of sections) {
         const el = document.getElementById(id)
         if (el) {
@@ -26,6 +29,7 @@ export default function Navbar() {
         }
       }
     }
+    handleScroll()
     window.addEventListener('scroll', handleScroll, { passive: true })
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
@@ -39,7 +43,7 @@ export default function Navbar() {
         style={{
           display: 'none',
           position: 'fixed',
-          top: '18px',
+          top: '16px',
           right: '20px',
           zIndex: 1100,
           flexDirection: 'column',
@@ -51,32 +55,32 @@ export default function Navbar() {
         }}
         className="hamburger-btn"
       >
-        <span style={{ display: 'block', width: '24px', height: '2px', background: '#fff', borderRadius: '2px', transition: 'all 0.3s', transform: menuOpen ? 'translateY(7px) rotate(45deg)' : 'none' }} />
-        <span style={{ display: 'block', width: '24px', height: '2px', background: '#fff', borderRadius: '2px', transition: 'all 0.3s', opacity: menuOpen ? 0 : 1 }} />
-        <span style={{ display: 'block', width: '24px', height: '2px', background: '#fff', borderRadius: '2px', transition: 'all 0.3s', transform: menuOpen ? 'translateY(-7px) rotate(-45deg)' : 'none' }} />
+        <span style={{ display: 'block', width: '24px', height: '2px', background: 'var(--blue)', borderRadius: '2px', transition: 'all 0.3s', transform: menuOpen ? 'translateY(7px) rotate(45deg)' : 'none' }} />
+        <span style={{ display: 'block', width: '24px', height: '2px', background: 'var(--blue)', borderRadius: '2px', transition: 'all 0.3s', opacity: menuOpen ? 0 : 1 }} />
+        <span style={{ display: 'block', width: '24px', height: '2px', background: 'var(--blue)', borderRadius: '2px', transition: 'all 0.3s', transform: menuOpen ? 'translateY(-7px) rotate(-45deg)' : 'none' }} />
       </button>
 
       {/* Mobile fullscreen menu */}
       <div style={{
         position: 'fixed',
         inset: 0,
-        zIndex: 1000,
-        background: 'rgba(17,17,17,0.98)',
+        zIndex: 1050,
+        background: 'var(--cream)',
         flexDirection: 'column',
         transition: 'opacity 0.3s, visibility 0.3s',
         opacity: menuOpen ? 1 : 0,
         visibility: menuOpen ? 'visible' : 'hidden',
-        display: 'flex',
+        display: 'none',
       }} className="mobile-menu">
         <ul style={{ listStyle: 'none', margin: 0, padding: '100px 30px 0', display: 'flex', flexDirection: 'column' }}>
           {navLinks.map((link) => {
             const isActive = activeSection === link.href.slice(1)
             return (
-              <li key={link.href} style={{ padding: '20px 0', fontSize: '20px', borderBottom: '1px solid rgba(255,255,255,0.1)' }}>
+              <li key={link.href} style={{ padding: '16px 0', borderBottom: '1px solid var(--line)' }}>
                 <a
                   href={link.href}
                   onClick={() => setMenuOpen(false)}
-                  style={{ textDecoration: 'none', color: isActive ? '#00e5ff' : '#fff', transition: 'color 0.3s' }}
+                  style={{ textDecoration: 'none', fontFamily: 'var(--font-display)', fontSize: '40px', textTransform: 'uppercase', color: isActive ? 'var(--blue)' : 'var(--ink)', transition: 'color 0.3s' }}
                 >
                   {link.label}
                 </a>
@@ -84,33 +88,33 @@ export default function Navbar() {
             )
           })}
         </ul>
+        <a href="/AHMEDBOUHTIT-CV.pdf" download style={{ margin: '36px 30px 0', alignSelf: 'flex-start', padding: '12px 24px', borderRadius: '30px', background: 'var(--blue)', color: '#fff', textDecoration: 'none', fontSize: '13px', fontWeight: 600, letterSpacing: '2px', textTransform: 'uppercase' }}>
+          Resume ↓
+        </a>
       </div>
 
-      {/* Desktop nav */}
-      <header style={{
+      {/* Top bar */}
+      <header className="site-header" style={{
         position: 'fixed',
         top: 0,
         left: 0,
-        width: '100%',
+        right: 0,
+        height: '68px',
         display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'flex-start',
-        paddingTop: '20px',
+        justifyContent: 'space-between',
+        alignItems: 'center',
+        padding: '0 6%',
         zIndex: 1000,
-        pointerEvents: 'none',
+        background: scrolled ? 'rgba(243,236,225,0.88)' : 'transparent',
+        backdropFilter: scrolled ? 'blur(10px)' : 'none',
+        borderBottom: `1px solid ${scrolled ? 'var(--line)' : 'transparent'}`,
+        transition: 'background 0.3s, border-color 0.3s',
       }}>
-        <nav style={{
-          pointerEvents: 'auto',
-          border: '0.5px solid rgba(255,255,255,0.3)',
-          background: 'rgba(17,17,17,0.85)',
-          backdropFilter: 'blur(10px)',
-          padding: '10px 30px',
-          borderRadius: '50px',
-          boxShadow: '0 0 15px rgba(0,229,255,0.15)',
-          display: 'flex',
-          gap: '47px',
-          alignItems: 'center',
-        }}>
+        <a href="#home" style={{ fontFamily: 'var(--font-display)', fontSize: '22px', color: 'var(--blue)', textDecoration: 'none', textTransform: 'uppercase', letterSpacing: '0.5px' }}>
+          Ahmed Bouhtit
+        </a>
+
+        <nav className="desktop-nav" style={{ display: 'flex', gap: '36px', alignItems: 'center' }}>
           {navLinks.map((link) => {
             const isActive = activeSection === link.href.slice(1)
             return (
@@ -119,9 +123,14 @@ export default function Navbar() {
                 href={link.href}
                 style={{
                   textDecoration: 'none',
-                  color: isActive ? '#00e5ff' : '#fff',
-                  fontSize: '16px',
-                  transition: 'color 0.3s',
+                  color: isActive ? 'var(--blue)' : 'var(--ink)',
+                  fontSize: '12px',
+                  fontWeight: 600,
+                  letterSpacing: '2.5px',
+                  textTransform: 'uppercase',
+                  paddingBottom: '4px',
+                  borderBottom: `2px solid ${isActive ? 'var(--blue)' : 'transparent'}`,
+                  transition: 'color 0.3s, border-color 0.3s',
                 }}
               >
                 {link.label}
@@ -129,13 +138,28 @@ export default function Navbar() {
             )
           })}
         </nav>
+
+        <a
+          href="/AHMEDBOUHTIT-CV.pdf"
+          download
+          className="desktop-nav"
+          style={{ padding: '9px 20px', borderRadius: '30px', border: '1.5px solid var(--blue)', color: 'var(--blue)', textDecoration: 'none', fontSize: '12px', fontWeight: 600, letterSpacing: '2px', textTransform: 'uppercase', transition: 'background 0.3s, color 0.3s' }}
+          onMouseEnter={e => { e.currentTarget.style.background = 'var(--blue)'; e.currentTarget.style.color = '#fff' }}
+          onMouseLeave={e => { e.currentTarget.style.background = 'transparent'; e.currentTarget.style.color = 'var(--blue)' }}
+        >
+          Resume ↓
+        </a>
       </header>
 
       <style>{`
+        @media (min-width: 1025px) {
+          .site-header { left: var(--sidebar) !important; }
+        }
         @media (max-width: 1024px) {
           .hamburger-btn { display: flex !important; }
           .mobile-menu { display: flex !important; }
-          header nav { display: none !important; }
+          .desktop-nav { display: none !important; }
+          .site-header { padding: 0 20px !important; }
         }
       `}</style>
     </>

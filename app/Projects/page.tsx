@@ -1,5 +1,6 @@
 'use client'
 import Link from "next/link"
+import SectionTitle from "../components/SectionTitle"
 
 const allProjects = [
   {
@@ -180,53 +181,56 @@ liveUrl: 'https://github.com/Ahmedbht/opticloud',
 
 export default function ProjectPage() {
   return (
-    <main style={{ background: '#000', minHeight: '100vh', padding: '80px 8%' }}>
-      <h1 style={{ fontSize: '36px', color: 'white', textAlign: 'center', marginBottom: '60px' }}>
-        All Projects
-      </h1>
+    <main style={{ background: 'var(--cream)', minHeight: '100vh', padding: '90px 6%' }}>
+      <SectionTitle eyebrow="Ahmed Bouhtit — Every project" title="All Projects" />
 
       <div className="flex flex-col gap-12">
-        {allProjects.map(project => (
-          <div key={project.id} className="bg-[rgba(0,229,255,0.05)] border border-[rgba(0,229,255,0.2)] rounded-2xl p-5">
+        {allProjects.map((project, i) => {
+          const [name, ...rest] = project.title.split(' : ')
+          return (
+          <div key={project.id} className="bg-[var(--card)] border border-[var(--line)] rounded-[20px] p-5 md:p-7 shadow-[0_24px_48px_-34px_rgba(30,36,138,0.4)]">
 
             {/* image + video with gap */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-5">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
 
               <img
   src={project.img}
   alt={project.title}
-  className="w-full h-80 object-cover bg-[#1a1a2e] block rounded-xl shadow-[0_0_20px_rgba(0,229,255,0.1)]"
-  onError={e => { (e.target as HTMLImageElement).style.background = '#1a1a2e' }}
+  className="w-full h-80 object-cover bg-[var(--cream-deep)] block rounded-2xl border border-[var(--line)]"
+  onError={e => { (e.target as HTMLImageElement).style.background = 'var(--cream-deep)' }}
 />
 
 {project.video && (
 <iframe
   src={project.video}
-  className="w-full h-80 rounded-xl" allowFullScreen/>
+  className="w-full h-80 rounded-2xl border border-[var(--line)]" allowFullScreen/>
 )}
 
             </div>
 
             {/* info */}
-            <h3 className="text-[#00e5ff] text-lg font-semibold mb-2">{project.title}</h3>
-            <p className="text-white text-sm leading-relaxed mb-4">{project.desc}</p>
-            <div className="flex flex-wrap gap-2 mb-4">
+            <p className="text-[var(--blue)] text-xs font-semibold tracking-[3px] mb-2">{String(i + 1).padStart(2, '0')}</p>
+            <h3 className="font-[family-name:var(--font-display)] text-[var(--blue)] text-3xl uppercase leading-none">{name}</h3>
+            {rest.length > 0 && <p className="text-[var(--muted)] text-sm tracking-wide mt-1">{rest.join(' : ')}</p>}
+            <p className="text-[var(--ink)] text-[15px] leading-relaxed my-4 max-w-3xl">{project.desc}</p>
+            <div className="flex flex-wrap gap-2 mb-5">
               {project.tags.map(tag => (
-                <span key={tag} className="px-3 py-1 bg-white/10 rounded-full text-xs text-white">
+                <span key={tag} className="px-3 py-1 border border-[var(--line)] rounded-full text-xs font-medium text-[var(--blue)]">
                   {tag}
                 </span>
               ))}
             </div>
             {project.liveUrl && (
-            <a href={project.liveUrl} className=" text-sm no-underline border rounded-full bg-[#00e5ff] p-2">Website link</a>
+            <a href={project.liveUrl} className="inline-block text-sm font-medium no-underline rounded-full bg-[var(--blue)] text-white px-6 py-3 hover:bg-[var(--blue-dark)] transition-colors">Visit website ↗</a>
             )}
 
           </div>
-        ))}
+          )
+        })}
       </div>
 
       <div className="mt-16 text-center">
-        <Link href="/" className="px-8 py-4 rounded-full bg-[#00e5ff] text-black font-medium text-base no-underline">
+        <Link href="/" className="inline-block px-8 py-4 rounded-full border-[1.5px] border-[var(--blue)] text-[var(--blue)] font-semibold text-base no-underline hover:bg-[var(--blue)] hover:text-white transition-colors">
           ← Back to Home
         </Link>
       </div>
