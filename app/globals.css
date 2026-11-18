@@ -10,7 +10,6 @@
   --ink: #1b1b2f;
   --muted: #5f5f73;
   --line: rgba(43, 51, 184, 0.16);
-  --sidebar: 48px;
 }
 
 html {
@@ -25,13 +24,6 @@ body {
 ::selection {
   background: var(--blue);
   color: #fff;
-}
-
-/* leave room for the fixed sidebar on desktop */
-@media (min-width: 1025px) {
-  .with-sidebar {
-    padding-left: var(--sidebar);
-  }
 }
 
 @keyframes rise {

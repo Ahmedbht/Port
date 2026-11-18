@@ -152,9 +152,6 @@ export default function Navbar() {
       </header>
 
       <style>{`
-        @media (min-width: 1025px) {
-          .site-header { left: var(--sidebar) !important; }
-        }
         @media (max-width: 1024px) {
           .hamburger-btn { display: flex !important; }
           .mobile-menu { display: flex !important; }

@@ -7,22 +7,18 @@ import Education from './components/Education'
 import About from './components/About'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
-import Sidebar from './components/Sidebar'
 
 export default function Home() {
   return (
     <>
-      <Sidebar />
       <Navbar />
-      <div className="with-sidebar">
-        <Hero />
-        <Projects />
-        <Skills />
-        <Education />
-        <About />
-        <Contact />
-        <Footer />
-      </div>
+      <Hero />
+      <Projects />
+      <Skills />
+      <Education />
+      <About />
+      <Contact />
+      <Footer />
 
       <a href='https://wa.me/212669608325' target="_blank" rel="noopener noreferrer" style={{
         position: 'fixed', bottom:'25px' , right:'25px', width:'78px', height:'78px', background: '#25d366', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', boxShadow:'0 10px 30px rgba(37,211,102,0.5)', zIndex:9999, transition:'transform 0.3s', textDecoration:'none'
