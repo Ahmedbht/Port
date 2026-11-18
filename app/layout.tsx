@@ -1,10 +1,9 @@
 import type { Metadata } from 'next'
-import { Anton, Jost, Mrs_Saint_Delafield } from 'next/font/google'
+import { Anton, Jost } from 'next/font/google'
 import './globals.css'
 
 const display = Anton({ weight: '400', subsets: ['latin'], variable: '--font-display' })
 const body = Jost({ subsets: ['latin'], variable: '--font-body' })
-const script = Mrs_Saint_Delafield({ weight: '400', subsets: ['latin'], variable: '--font-script' })
 
 export const metadata: Metadata = {
   title: 'Ahmed — Full-Stack & Mobile Developer',
@@ -16,7 +15,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className={`${display.variable} ${body.variable} ${script.variable}`}>
+    <html lang="en" className={`${display.variable} ${body.variable}`}>
       <body className="bg-[var(--cream)] min-h-screen overflow-x-hidden">
         {children}
       </body>

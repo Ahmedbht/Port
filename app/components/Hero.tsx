@@ -5,8 +5,7 @@ const HERO_PHOTO = '/ana.png'
 
 // Keep these in sync with the projects and skills lists
 const stats = [
-  { value: '20', label: 'projects' },
-  { value: '3', label: 'mobile apps' },
+  { value: '25+', label: 'projects' },
   { value: '20+', label: 'skills' },
 ]
 
@@ -68,13 +67,7 @@ export default function Hero() {
           <strong style={{ color: 'var(--blue)', fontWeight: 600 }}>Flutter</strong>.
         </p>
 
-        {/* signature */}
-        <div className="reveal" style={{ display: 'flex', alignItems: 'flex-end', gap: '6px', marginTop: '8px', animationDelay: '0.35s' }}>
-          <span style={{ fontFamily: 'var(--font-script)', fontSize: '64px', lineHeight: 1, color: 'var(--blue)' }}>Ahmed</span>
-          <span style={{ width: '70px', height: '1px', background: 'var(--blue)', marginBottom: '14px' }} />
-        </div>
-
-        <div className="reveal" style={{ display: 'flex', gap: '28px', flexWrap: 'wrap', marginTop: '22px', animationDelay: '0.45s' }}>
+        <div className="reveal" style={{ display: 'flex', gap: '28px', flexWrap: 'wrap', marginTop: '30px', animationDelay: '0.35s' }}>
           {stats.map(s => (
             <p key={s.label} style={{ margin: 0, display: 'flex', alignItems: 'baseline', gap: '7px' }}>
               <span style={{ fontFamily: 'var(--font-display)', fontSize: '28px', color: 'var(--blue)' }}>{s.value}</span>
