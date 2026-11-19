@@ -1,7 +1,7 @@
 'use client'
 
 // Swap this for the new photo when it's ready (a cut-out PNG works best)
-const HERO_PHOTO = '/ana.png'
+const HERO_PHOTO = '/cinematichero.png'
 
 // Keep these in sync with the projects and skills lists
 const stats = [
@@ -105,11 +105,11 @@ export default function Hero() {
         <span style={{ position: 'absolute', bottom: 0, left: '46%', width: '34%', height: '66%', borderRadius: '140px 140px 0 0', background: 'repeating-linear-gradient(90deg, rgba(160,135,95,0.35) 0 1px, transparent 1px 9px)' }} />
         {/* outline arch */}
         <span style={{ position: 'absolute', bottom: 0, left: '10%', width: '58%', height: '88%', borderRadius: '999px 999px 0 0', border: '1.5px solid var(--blue)', borderBottom: 'none', opacity: 0.5 }} />
-        {/* photo arch */}
-        <div style={{ position: 'absolute', bottom: 0, left: '17%', width: '58%', height: '86%', borderRadius: '999px 999px 0 0', overflow: 'hidden', background: 'var(--cream-deep)', boxShadow: '0 30px 60px -30px rgba(30,36,138,0.45)' }}>
-          <img src={HERO_PHOTO} alt="Ahmed Bouhtit" style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center top', display: 'block' }} />
-          <span style={{ position: 'absolute', inset: 'auto 0 0 0', height: '22%', background: 'linear-gradient(to top, var(--cream) 0%, transparent 100%)' }} />
-        </div>
+        {/* photo arch (background shape) */}
+        <div style={{ position: 'absolute', bottom: 0, left: '17%', width: '58%', height: '78%', borderRadius: '999px 999px 0 0', background: 'var(--blue)', boxShadow: '0 30px 60px -30px rgba(30,36,138,0.45)' }} />
+        {/* cut-out photo — head rises above the arch */}
+        <img src={HERO_PHOTO} alt="Ahmed Bouhtit" style={{ position: 'absolute', bottom: 0, left: '6%', width: '80%', height: '100%', objectFit: 'contain', objectPosition: 'center bottom', display: 'block', filter: 'drop-shadow(0 20px 30px rgba(27,27,47,0.25))' }} />
+        <span style={{ position: 'absolute', bottom: 0, left: 0, right: 0, height: '14%', background: 'linear-gradient(to top, var(--cream) 0%, transparent 100%)', pointerEvents: 'none' }} />
         {/* monogram badge */}
         <div style={{ position: 'absolute', top: '52%', right: '2%', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '10px' }}>
           <span style={{ width: '84px', height: '84px', borderRadius: '50%', background: 'var(--blue)', border: '4px solid var(--card)', boxShadow: '0 12px 30px -10px rgba(30,36,138,0.6)', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#fff', fontFamily: 'var(--font-display)', fontSize: '30px' }}>
